@@ -7,3 +7,5 @@ Synopsis:
 * Get another clue: some kind of password and also clues to the Bezos Cult
 * Go to Wallstreet, then AWS_Alley
 * Talk to contact, Kennen deRenard, to provide the password
+* Welcome to the Cult
+
