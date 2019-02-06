@@ -44,7 +44,7 @@ int main(int argc, char* argv[])
 
         options.add_options("Investigation")
             ("h,house", "Investigate a house", cxxopts::value<std::vector<std::string>>())
-            ("e,evidence", "Investigate a piece of evidence", cxxopts::value<std::string>())
+            ("e,evidence", "Investigate a file that starts with '.' Search for clues using 'ls -a'", cxxopts::value<std::string>())
             ("p,person", "Investigate a person", cxxopts::value<std::string>())
         ;
 
@@ -66,15 +66,15 @@ int main(int argc, char* argv[])
         // Hardcoded the house itself
         if (result.count("house"))
         {
+            Game g;
             auto& v = result["house"].as<std::vector<std::string>>();
             std::vector<std::string> andre = {"College", "Avenue", "34"};
             for (size_t i = 0; i < andre.size(); i++) {
                 if (andre.at(i) != v.at(i)) {
-                    std::cout << "Not enough evidence to enter the house." << std::endl;
+                    g.execute("investH");
                     exit(0);
                 }
             }
-            Game g;
             g.execute("investHouse");
         }
 

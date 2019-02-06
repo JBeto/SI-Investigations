@@ -63,44 +63,43 @@ void Game::execute(std::string command) {
     if (command == "invest.phone") {
         std::cout << "(A lot of shinies on Pokemon Go)" << std::endl;
     }
-    if (command == "invest.wallposter") {
-        printFile("aws.txt");
+    if (command == "invest.wallpaper") {
+        printFile("wallpaper.txt");
         setGameState(State::Question);
-    }
-    if (command == "invest.sketchy_folder") {
-        cout << "After searching through the folder, you discover a single phrase in the AWS folder: $money$" << endl;
-        cout << "* Added as a note *" << endl;
-        moveFile(".Secret/phrase.txt", "Notes/phrase.txt");
-        removeFile(".sketchy_folder");
     }
     else if (command == "investHouse") {
         if (getGameState() == State::Assignment) {
             setGameState(State::House);
+            moveFile(".Secret/Andre's_House", "Mystery/Chapter_1/Streets/Andre's_House");
             std::cout << "Click.\nYou have now entered the house." << std::endl;
             std::cout << "Chief: Keep your guard up - why is the door unlocked in the first place?" << std::endl;
         }
+    }
+    else if (command == "investH") {
+        std::cout << "Woah, didn't mean to see THAT. Wrong house." << std::endl;
     }
     if (command == "talkChief.person") {
         switch(getGameState()) {
             case State::Intro:
                 printFile("chief1.txt");
-                break;
-            case State::Tutorial:
-                printFile("chief2.txt");
+                setGameState(State::Assignment);
                 break;
             case State::Assignment:
-                printFile("chief3.txt");
+                printFile("chief2.txt");
+                moveFile(".Secret/Omar's_Phone", "Notes/Omar's_Phone");
+                moveFile(".Secret/machine_learning", "Mystery/Chapter_1/SIPD/Your_PC/Code/machine_learning");
+                moveFile(".Secret/people.txt", "Notes/people.txt");
                 break;
             case State::House:
-                printFile("chief4.txt");
+                printFile("chief3.txt");
                 break;
             case State::Question:
-                printFile("chief5.txt");
+                printFile("chief4.txt");
+                moveFile(".Secret/Silicon_Valley", "Mystery/Chapter_1/Silicon_Valley");
                 break;
             case State::Password:
-                printFile("chief6.txt");
+                printFile("chief5.txt");
                 break;
-            
             default:
                 break;
         }
@@ -112,7 +111,7 @@ void Game::execute(std::string command) {
         switch(getGameState()) {
             case State::Password:
             case State::Question:
-                if (checkFile("password", "$money$")) {
+                if (checkFile("password", "money")) {
                     std::cout << "Welcome to the Cult ~" << std::endl;
                 }
                 else {
