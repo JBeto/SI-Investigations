@@ -46,7 +46,7 @@ void Game::moveFile(const std::string &file, const std::string &endPath) {
         fs::rename(getParent() / file, getParent() / endPath);
     }
     catch (const fs::filesystem_error &e) {
-        std::cout << "Something went wrong in the investigation!" << std::endl;
+        // std::cout << "Something went wrong in the investigation!" << std::endl;
     }
 }
 
@@ -55,7 +55,7 @@ void Game::removeFile(const std::string &file) {
         fs::remove(fs::current_path() / file);
     }
     catch (const fs::filesystem_error &e) {
-        std::cout << "Something went wrong in the investigation!" << std::endl;
+        // std::cout << "Something went wrong in the investigation!" << std::endl;
     }
 }
 
