@@ -29,7 +29,7 @@ There's been a murder in Terminal City, and SIPD needs your help.
 
 To figure out whodunit, you need access to a command line.
 
-Be sure to run `./start.sh` to configure everything correctly.
+Be sure to run `PATH=$PATH:$(pwd)/Commands` in Bash to configure everything correctly before playing
 
 Open a Terminal, go to the location of the files, and start by going to SIPD and talking to the Chief via `talk -p Chief.person`
 
