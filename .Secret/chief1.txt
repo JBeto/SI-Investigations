@@ -17,4 +17,3 @@ g++ <srcFile> -o <outputFile> | you should know what this does
 
 You also have 'commands' that you alone can perform. To see your commands, type in 'commands'. The alibis and police report are
 at the computer, so be sure to take a look.
-
