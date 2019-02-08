@@ -23,12 +23,11 @@ THE SOFTWARE.
 */
 
 #include <iostream>
-#include <filesystem>
+#include <experimental/filesystem>
 #include "cxxopts.hpp"
 #include "game.h"
 
-namespace fs = std::filesystem;
-
+namespace fs = std::experimental::filesystem::v1;
 int main(int argc, char* argv[])
 {
     try

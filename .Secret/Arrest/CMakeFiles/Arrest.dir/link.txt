@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Arrest.dir/arrest.cpp.o  -o Arrest -lstdc++fs 

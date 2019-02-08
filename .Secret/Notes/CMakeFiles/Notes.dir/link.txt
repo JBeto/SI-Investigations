@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Notes.dir/notes.cpp.o CMakeFiles/Notes.dir/game.cpp.o  -o Notes -lstdc++fs 

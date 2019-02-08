@@ -2,8 +2,8 @@
 #define GAME_H
 
 #include <string>
-#include <filesystem>
-namespace fs = std::filesystem;
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem::v1;
 
 enum class State {
     Intro = 0,
