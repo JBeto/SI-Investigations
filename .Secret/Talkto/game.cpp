@@ -97,7 +97,7 @@ void Game::execute(std::string command) {
                 setGameState(State::Password);
                 printFile("chief4.txt");
                 moveFile(".Secret/Silicon_Valley", "Mystery/Chapter_1/Silicon_Valley");
-                moveFile("Mystery/Chapter_1/Streets/Andre_House/Chief.person", "Mystery/Chapter_1/Silicon_Valley");
+                moveFile("Mystery/Chapter_1/Streets/Andre_House/Chief.person", "Mystery/Chapter_1/Silicon_Valley/Chief.person");
                 break;
             case State::Password:
                 printFile("chief5.txt");
