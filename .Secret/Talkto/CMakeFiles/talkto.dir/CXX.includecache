@@ -6,36 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/cxxopts.hpp
-cstring
--
-cctype
--
-exception
--
-iostream
--
-map
--
-memory
--
-regex
--
-sstream
--
-string
--
-unordered_map
--
-unordered_set
--
-vector
--
-optional
--
-unicode/unistr.h
--
-
 /home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/game.cpp
 game.h
 /home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/game.h
@@ -49,14 +19,4 @@ string
 -
 filesystem
 -
-
-/home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/talk.cpp
-iostream
--
-filesystem
--
-cxxopts.hpp
-/home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/cxxopts.hpp
-game.h
-/home/jbeto/Documents/SI/SI-Investigations/.Secret/Talkto/game.h
 

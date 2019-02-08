@@ -86,16 +86,18 @@ void Game::execute(std::string command) {
                 break;
             case State::Assignment:
                 printFile("chief2.txt");
-                moveFile(".Secret/Omar's_Phone", "Notes/Omar's_Phone");
+                moveFile(".Secret/Omar_Phone", ".Secret/Notes_/Omar_Phone");
                 moveFile(".Secret/machine_learning", "Mystery/Chapter_1/SIPD/Your_PC/Code/machine_learning");
-                moveFile(".Secret/people.txt", "Notes/people.txt");
+                moveFile(".Secret/people.txt", ".Secret/Notes_/people.txt");
                 break;
             case State::House:
                 printFile("chief3.txt");
                 break;
             case State::Question:
+                setGameState(State::Password);
                 printFile("chief4.txt");
                 moveFile(".Secret/Silicon_Valley", "Mystery/Chapter_1/Silicon_Valley");
+                moveFile("Mystery/Chapter_1/Streets/Andre_House/Chief.person", "Mystery/Chapter_1/Silicon_Valley");
                 break;
             case State::Password:
                 printFile("chief5.txt");
@@ -111,8 +113,9 @@ void Game::execute(std::string command) {
         switch(getGameState()) {
             case State::Password:
             case State::Question:
-                if (checkFile("password", "money")) {
-                    std::cout << "Welcome to the Cult ~" << std::endl;
+                if (checkFile("Mystery/Chapter_1/Silicon_Valley/AWS_Alley/Computer/password.txt", "money")) {
+                    std::cout << "Welcome to the Cult ~" << std::endl << endl;
+                    std::cout << "End of Chapter 1" << endl;
                 }
                 else {
                     std::cout << "Put in the password on a file called 'password.txt' on the computer first. We'll talk again if it's correct." << std::endl;

@@ -6,6 +6,6 @@ int main() {
     cout << "arrest" << endl;
     cout << "investigate --help" << endl;
     cout << "notes --help" << endl;
-    cout << "talk --help" << endl;
+    cout << "talkto --help" << endl;
     return 0;
 }

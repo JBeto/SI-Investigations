@@ -62,16 +62,19 @@ void Game::removeFile(const std::string &file) {
 void Game::execute(std::string command) {
     if (command == "invest.phone") {
         std::cout << "(A lot of shinies on Pokemon Go)" << std::endl;
+        exit(0);
     }
     if (command == "invest.wallpaper") {
         printFile("wallpaper.txt");
         setGameState(State::Question);
+        std::cout << "(Graffiti all over the wallpaper)" << std::endl;
+        exit(0);
     }
     else if (command == "investHouse") {
         if (getGameState() == State::Assignment) {
             setGameState(State::House);
             moveFile(".Secret/Andre_House", "Mystery/Chapter_1/Streets/Andre_House");
-            moveFile("Myster/Chapter_1/SIPD", "Mystery/Chapter_1/Streets/Andre_House");
+            moveFile("Mystery/Chapter_1/SIPD/Chief.person", "Mystery/Chapter_1/Streets/Andre_House/Chief.person");
             std::cout << "Click.\nYou have now entered the house." << std::endl;
             std::cout << "Chief: Keep your guard up - why is the door unlocked in the first place?" << std::endl;
         }
@@ -109,15 +112,17 @@ void Game::execute(std::string command) {
             default:
                 break;
         }
+        exit(0);
     }
     else if(command == "talkGuard.person") {
         std::cout << "There's really nothing here to do." << std::endl;
+        exit(0);
     }
     else if (command == "talkKennen.person") {
         switch(getGameState()) {
             case State::Password:
             case State::Question:
-                if (checkFile("password", "money")) {
+                if (checkFile("Mystery/Chapter_1/Silicon_Valley/AWS_Alley/Computer/password.txt", "money")) {
                     std::cout << "Welcome to the Cult ~" << std::endl;
                 }
                 else {

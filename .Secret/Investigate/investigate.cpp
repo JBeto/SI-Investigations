@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
         ;
 
         options.add_options("Investigation")
-            ("h,house", "Investigate a house", cxxopts::value<std::string>())
+            ("h,house", "Investigate a house. Usage: investigate -h \"Madeup Avenue 31\"", cxxopts::value<std::string>())
             ("e,evidence", "Investigate a file that starts with '.' Search for clues using 'ls -a'", cxxopts::value<std::string>())
             ("p,person", "Investigate a person", cxxopts::value<std::string>())
         ;
