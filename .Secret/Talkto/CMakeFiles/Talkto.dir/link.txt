@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/Talkto.dir/talk.cpp.o CMakeFiles/Talkto.dir/game.cpp.o  -o Talkto -lstdc++fs 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/investigate.dir/investigate.cpp.o CMakeFiles/investigate.dir/game.cpp.o  -o investigate -lstdc++fs 
